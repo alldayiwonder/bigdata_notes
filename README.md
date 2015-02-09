@@ -38,9 +38,10 @@ As described by Jules Berman in [Principles of Big Data](http://www.sciencedirec
 
 # What is Data Science?
 
+
 [![data-science-venn-diagram](http://static1.squarespace.com/static/5150aec6e4b0e340ec52710a/t/51525c33e4b0b3e0d10f77ab/1364352052403/Data_Science_VD.png?format=750w "Data Science Venn Diagram")](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram)
 
-Drew Conway’s Venn diagram of data science
+
 
 [![analyzing-the-analyzers](https://www.safaribooksonline.com/library/view/doing-data-science/9781449363871/images/dnds_0104.png "Sub Fields of Data Science")](http://www.oreilly.com/data/free/analyzing-the-analyzers.csp)
 
