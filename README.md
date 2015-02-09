@@ -3,7 +3,7 @@ There is no formal definition for "Big Data." As with the term "green," this can
 
 ## The common definition of Big Data
 
-### Volume, velocty, variety (The Three V's)
+### Volume, velocity, variety (The Three V's)
 As described by Doug Laney in a 2001 [article](http://blogs.gartner.com/doug-laney/files/2012/01/ad949-3D-Data-Management-Controlling-Data-Volume-Velocity-and-Variety.pdf).
 
 1. Volume: data is too big to work with on a single machine. Since this is relative to the latest in personal computing power, the absolute volume will increase over time. So the definition of Big Data is influenced by Moore's Law. 
