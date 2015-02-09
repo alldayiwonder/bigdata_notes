@@ -36,12 +36,14 @@ As described by Jules Berman in [Principles of Big Data](http://www.sciencedirec
 | Data describes itself in an important way              | May have to clean data thoroughly and filter out bogus information | 
 | Can analyze all the data at once from a single file or machine  | May have to deal with portions of data and aggregate results | 
 
+# Sources of Data
+
+* Human (data initiated by a human such as social network posts, cell phone calls, online purchases, and the metadata created alongside such data)
+* Machine (communication between machines that may never be seen by humans (e.g. internet of things)
+
 # What is Data Science?
 
-
 [![data-science-venn-diagram](http://static1.squarespace.com/static/5150aec6e4b0e340ec52710a/t/51525c33e4b0b3e0d10f77ab/1364352052403/Data_Science_VD.png?format=750w "Data Science Venn Diagram")](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram)
-
-
 
 [![analyzing-the-analyzers](https://www.safaribooksonline.com/library/view/doing-data-science/9781449363871/images/dnds_0104.png "Sub Fields of Data Science")](http://www.oreilly.com/data/free/analyzing-the-analyzers.csp)
 
