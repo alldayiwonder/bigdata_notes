@@ -3,7 +3,7 @@ There is no formal definition for "Big Data." As with the term "green," this can
 
 ## The common definition of Big Data
 
-### Volume, velocty, variety
+### Volume, velocty, variety (The Three V's)
 As described by Doug Laney in a 2001 [article](http://blogs.gartner.com/doug-laney/files/2012/01/ad949-3D-Data-Management-Controlling-Data-Volume-Velocity-and-Variety.pdf).
 
 1. Volume: data is too big to work with on a single machine. Since this is relative to the latest in personal computing power, the absolute volume will increase over time. So the definition of Big Data is influenced by Moore's Law. 
@@ -11,6 +11,14 @@ As described by Doug Laney in a 2001 [article](http://blogs.gartner.com/doug-lan
 3. Variety: (e.g. unstructuerd data, NoSQL databases, etc)
 
 If you have all three cases, you are dealing with big data under this common definition. If you have only one case, it is likely you are still dealing with big data.
+
+Examples having an instance of only one of the three V's:
+
+| Case                | Example             | 
+| --------------------| --------------------| 
+| Volume          | Genetics (structured, high volume of data)                    |
+| Velocity        | Earthquake detection data (e.g. streaming data, not necessarily stored) |
+| Variety         | Facial recongition data (may be static)                               |
 
 ### Practical differences between small and big data
 As described by Jules Berman in [Principles of Big Data](http://www.sciencedirect.com/science/book/9780124045767).
@@ -36,3 +44,4 @@ Drew Conway’s Venn diagram of data science
 
 [![analyzing-the-analyzers](https://www.safaribooksonline.com/library/view/doing-data-science/9781449363871/images/dnds_0104.png "Sub Fields of Data Science")](http://www.oreilly.com/data/free/analyzing-the-analyzers.csp)
 Harlan Harris’s clustering and visualization of subfields of data science from Analyzing the Analyzers (O’Reilly) by Harlan Harris, Sean Murphy, and Marck Vaisman based on a survey of several hundred data science practitioners in mid-2012
+
