@@ -1,5 +1,5 @@
 # What is Big Data?
-There is no formal definition for "Big Data." As with the term "green," this can bring about confusion; it can also lead some to believe that they are working with big data when they, for all practical purposes, are actually using small data.
+There is no formal definition for "Big Data." As with the term "green," this can bring about confusion. It may also lead someone to believe that they are working with big data when they, for all practical purposes, using small data.
 
 ## The common definition of Big Data
 
