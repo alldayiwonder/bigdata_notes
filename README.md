@@ -1,14 +1,16 @@
 # What is Big Data?
-There is no formal definition for "Big Data." As with the term "green," this can bring about confusion. It may also lead someone to believe that they are working with big data when they, for all practical purposes, using small data.
+There is no formal definition for "Big Data." As with the term "green," this can bring about confusion. The term may also be subject to the equivalent of "[greenwashing](http://en.wikipedia.org/wiki/Greenwashing)," where organizations may use it soley as a buzz word. Lastly, some may be lead to believe they are working with big data when they are using small data.
 
 ## The common definition of Big Data
 
 ### Volume, velocity, variety (The Three V's)
 As described by Doug Laney in a 2001 [article](http://blogs.gartner.com/doug-laney/files/2012/01/ad949-3D-Data-Management-Controlling-Data-Volume-Velocity-and-Variety.pdf).
 
-1. Volume: data is too big to work with on a single machine. Since this is relative to the latest in personal computing power, the absolute volume will increase over time. So the definition of Big Data is influenced by Moore's Law. 
+1. Volume: data is too big to work with on a single machine. 
 2. Velocity: data is too dynamic and being created at too high of a rate (e.g. tweets per second) for a single machine to handle.
 3. Variety: (e.g. unstructuerd data, NoSQL databases, etc)
+
+The first two points are relative to processing power and the latest technology in personal computing, the absolute volume or velocity that may identify Big Data will increase over time. And so this definition of Big Data is fluid and influenced by [Moore's Law](http://en.wikipedia.org/wiki/Moore%27s_law).
 
 If you have all three cases, you are dealing with big data under this common definition. If you have only one case, it is likely you are still dealing with big data.
 
