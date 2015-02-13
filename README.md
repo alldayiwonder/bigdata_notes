@@ -8,7 +8,7 @@ As described by Doug Laney in a 2001 [article](http://blogs.gartner.com/doug-lan
 
 1. Volume: data is too big to work with on a single machine. 
 2. Velocity: data is too dynamic and being created at too high of a rate (e.g. tweets per second) for a single machine to handle.
-3. Variety: (e.g. unstructuerd data, NoSQL databases, etc)
+3. Variety: (e.g. unstructured data, NoSQL databases, etc)
 
 The first two points are relative to processing power and the latest technology in personal computing, the absolute volume or velocity that may identify Big Data will increase over time. And so this definition of Big Data is fluid and influenced by [Moore's Law](http://en.wikipedia.org/wiki/Moore%27s_law).
 
@@ -20,7 +20,7 @@ Examples having an instance of only one of the three V's:
 | --------------------| --------------------| 
 | Volume          | Genetics (structured, high volume of data)                    |
 | Velocity        | Earthquake detection data (e.g. streaming data, not necessarily stored) |
-| Variety         | Facial recongition data (may be static)                               |
+| Variety         | Facial recognition data (may be static)                               |
 
 ### Practical differences between small and big data
 As described by Jules Berman in [Principles of Big Data](http://www.sciencedirect.com/science/book/9780124045767).
@@ -31,7 +31,7 @@ As described by Jules Berman in [Principles of Big Data](http://www.sciencedirec
 | Exists in one location, often in a single file          | Can be in multiple files and across multiple machines in different geographic locations      | 
 | Highly structured (e.g. spreadsheet, csv)               | May be unstructured, in a variety of different formats, and multi-disicplinary     |   
 | Prepared by end user for own purposes                   | May be prepared by one group, analyzed by a second, and used by third group  | 
-| Kept for a finite timeframe for project with clear endpoint (maybe 5 or 10 years in government or academia)         | May keep data indefinitely or with uncertain lifespan | 
+| Kept for a finite time frame for project with clear endpoint (maybe 5 or 10 years in government or academia)         | May keep data indefinitely or with uncertain lifespan | 
 | Data measured or recorded with a single protocol and units  | Data may be collected using a variety of protocols and units  throughout different geographical regions | 
 | Can typically be reproduced                            | May not be reproducible | 
 | Cost of failure or losing data is small                | Cost of failure or losing data can be high | 
