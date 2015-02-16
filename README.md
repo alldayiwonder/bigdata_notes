@@ -1,5 +1,5 @@
 # What is Big Data?
-There is no formal definition for "Big Data." As with the term "green," this can bring about confusion. The term may also be subject to the equivalent of "[greenwashing](http://en.wikipedia.org/wiki/Greenwashing)," where organizations may use it soley as a buzz word. Lastly, some may be lead to believe they are working with big data when they are using small data.
+There is no formal definition for "Big Data." As with the term "green," this can bring about confusion. The term may also be subject to the equivalent of [greenwashing](http://en.wikipedia.org/wiki/Greenwashing), where organizations may use it soley as a buzz word. Lastly, some may be lead to believe they are working with big data when they are using small data.
 
 ## The common definition of Big Data
 
@@ -40,8 +40,8 @@ As described by Jules Berman in [Principles of Big Data](http://www.sciencedirec
 
 # Sources of Data
 
-* Human (data initiated by a human such as social network posts, cell phone calls, online purchases, and the metadata created alongside such data)
-* Machine (communication between machines that may never be seen by humans (e.g. internet of things)
+* Human: data initiated by a human such as social network posts, cell phone calls, online purchases, and the metadata created alongside such data.
+* Machine: communication between machines that may never be seen by humans (e.g. internet of things)
 
 # What is Data Science?
 
