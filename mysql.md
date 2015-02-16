@@ -1,8 +1,8 @@
 # Notes on MySQL
 
-Relational database...
+While MySQL can handle the large volume aspect of [Big Data](README.md), it may not be able to handle data sets with high velocity or variety. Since MySQL is a relational database, it requires data to be structured with its schema explicitly specified.
 
-## Import data into MySQL 
+### Import data into MySQL 
 
 Via terminal:
 
