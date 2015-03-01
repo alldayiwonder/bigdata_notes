@@ -36,6 +36,7 @@ MapReduce is a method of processing large amounts of data for Big Data applicati
 * Need to write code that has a Map class, a Reduce class, and a main function with a job that calls an instance of the Map and Reduce classes
 * Source data (e.g. HDFS, cloud based) is called upon within the code
 * After the Map() function there is an automatic sort and shuffle mechanism built-into the MapReduce program and is not part of the logic that needs to be written by the user within the Map() and Reduce() functions
+* Simplest way to optimize a MapReduce process is to add more nodes, and can also modify a wide array of aspects to optimize further
 
 ![MapReduce](http://www.cs.uml.edu/~jlu1/doc/source/report/img/MapReduceExample.png)
 
@@ -43,4 +44,4 @@ MapReduce is a method of processing large amounts of data for Big Data applicati
 * "Word Count" which takes text as input, produces a list of words, and counts frequency of each word
 * Need to define what a word is in your code
 * Can be run in an IDE or command line
-* Look for word "sucess" in the output and the results of the processed data
+* Look for word "SUCCESS" in the output along with the results of the processed data
