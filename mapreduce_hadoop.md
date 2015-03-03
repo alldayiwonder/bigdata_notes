@@ -1,6 +1,6 @@
 # Notes on MapReduce and Hadoop
 
-MapReduce is a method of processing large amounts of data for Big Data applications. A very popular implementation of MapReduce is found within Hadoop. So, a distribution such as Hadoop may be used in supplement with relational databases like MySQL and Oracle for Big Data applications (e.g. transactional analysis).
+MapReduce is a method of processing large amounts of data for Big Data applications. A very popular implementation of MapReduce is found within Hadoop. So, a distribution such as Hadoop may be used in supplement with relational databases like MySQL and Oracle for Big Data applications (e.g. transactional analysis). A relation can be stored as a file in a distributed file system (DFS) and used within a process such as MapReduce.
 
 ### Apache Hadoop
 
@@ -38,10 +38,14 @@ MapReduce is a method of processing large amounts of data for Big Data applicati
 * After the Map() function there is an automatic sort and shuffle mechanism built-into the MapReduce program and is not part of the logic that needs to be written by the user within the Map() and Reduce() functions
 * Simplest way to optimize a MapReduce process is to add more nodes, and can also modify a wide array of aspects to optimize further
 
-![MapReduce](http://www.cs.uml.edu/~jlu1/doc/source/report/img/MapReduceExample.png)
-
 ### Hello World for MapReduce
 * "Word Count" which takes text as input, produces a list of words, and counts frequency of each word
 * Need to define what a word is in your code
 * Can be run in an IDE or command line
 * Look for word "SUCCESS" in the output along with the results of the processed data
+
+![MapReduce](http://www.cs.uml.edu/~jlu1/doc/source/report/img/MapReduceExample.png)
+
+### Computing with MapReduce
+* MapReduce can be used to compute selection, projection, union, intersection, difference, natural join, grouping, aggregations, etc
+* The original purpose of MapReduce was to compute very large matrix-vector multiplications, which was needed for Google's [PageRank](http://en.wikipedia.org/wiki/PageRank)
