@@ -8,9 +8,11 @@ Below are notes on how to use MySQL for small data. For Big Data, relational dat
 
 ### Import data into MySQL
 
+[Notes on using LOAD DATA to import data into MySQL](http://cs.nyu.edu/~deena/wp_dbw_fa13/?page_id=483)
+
 Via terminal:
 
-#### Create table:
+#### Create table example:
 ```
 CREATE TABLE table_name (
 	field_name varchar(),
@@ -20,9 +22,9 @@ CREATE TABLE table_name (
 	field_name INTEGER
 );
 ```
-#### Load data into table:
+#### Load data into table example:
 
-Example for CSV with comma separated values and quotes as text delimiter:
+For CSV with comma separated values, quotes as text delimiter, and header row:
 
 ````
 LOAD DATA LOCAL INFILE 'file_path'
