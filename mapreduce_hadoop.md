@@ -27,6 +27,7 @@ MapReduce is a method of processing large amounts of data for Big Data applicati
 * Enterprises may chose to instead operate a commercial version (e.g. Cloudera, Hortonworks, MapR) which wraps around a portion of the Hadoop distribution and provides additional tools for enterprises.
 * A cloud distribution is typically used to implement Hadoop (e.g. Amazon Web Services)
 * Hadoop operates with the Hadoop distributed file system (HDFS) file system. This means that your local file(s) that you want to input into Hadoop and processed through MapReduce must first be pushed to the HDFS file system.
+* Note that Hadoop is not a database, but it can be used to process data held within databases
 
 ### Hue
 * User interface for Hadoop
@@ -47,9 +48,20 @@ MapReduce is a method of processing large amounts of data for Big Data applicati
 ### Runnning a Word Count within the Cloudera Virtual Machine using Python
 The below was done running the [Cloudera VM](http://www.cloudera.com/content/cloudera/en/downloads/quickstart_vms/cdh-5-3-x.html) through [VirtualBox](https://www.virtualbox.org/), which allows you to get started learning or testing your job on Hadoop through the virtual machine. Hadoop and everything is pre-installed on a linux OS.
 
+Test application:
+* Count the number of times each word appears in a given set of Wikipedia articles
+
 General procedure via terminal:
 * Change directory to the folder containing the map and reduce files written in Python
-* Give permission for Hadoop to execute the map and reduce: chmod +x map.py reduce.py
+* See here for [example map function]()
+  * This mapper  excludes [stop words](http://en.wikipedia.org/wiki/Stop_words) and punctuation
+* See here for [example reduce function]()
+* Test your map and reduce files to be sure it works before running through MapReduce:
+  * To test on string entered in command line: echo "foo foo quux labs foo bar quux" | path-to-mapper.py | sort | path-to-reducer.py
+  * To test on map and reduce files:
+    * Give system permission to execute the map and reduce files as executables: chmod +x map.py reduce.py
+    * cat path-to-text | path-to-mapper.py | sort | path-to-reducer.py
+  * Can replace quoted text with path to a text file instead
 * Since we are using Python, locate the hadoop-streaming JAR file. Within the Cloudera VM, I am using: /usr/lib/hadoop-0.20-mapreduce/contrib/streaming/hadoop-streaming-2.5.0-mr1-cdh5.3.0.jar
 * Push the input file(s) onto HDFS: hadoop fs -put local_path hdfs_path
 * Check to see if the file(s) were pushed to the HDFS file system: hadoop fs -ls
@@ -66,3 +78,9 @@ General procedure via terminal:
 
 * Note that we are specifying Hadoop to use only a single reducer (-D mapreduce.job.reduces=1) since we are running this in a VM for learning and testing purposes.
 * Lastly, the Hadoop job output will be written to HDFS. Copy the output folder to local: hadoop fs -get art_out local_path
+* The output is a list of key, value pairs separted by a tab where the key is the word and the value is the number of times it appears in all the input. Example output: Alabama 2400
+
+### Join Two Tables Using MapReduce and Hadoop on Amazon Web Services
+* Content can be stored in the cloud with Amazon S3 (Simple Storage Service)
+* MapReduce can be performed with Amazon EMR (Elastic MapReduce) which uses Hadoop
+* We can use hadoop-streaming to write the map and reduce functions in Python as opposed to Java
