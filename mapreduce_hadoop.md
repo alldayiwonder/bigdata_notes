@@ -2,6 +2,8 @@
 
 MapReduce is a method of processing large amounts of data for Big Data applications. A very popular implementation of MapReduce is found within Hadoop. So, a distribution like Hadoop can be used in supplement with relational databases like MySQL and Oracle for Big Data applications (e.g. transactional analysis). A relation can be stored as a file in a distributed file system (DFS) and used within a process such as MapReduce.
 
+HDFS and MapReduce makes sense when data is very large and relatively static in the sense that it is not updated often.
+
 ### MapReduce
 * Created by Google to solve the problem of how to index and gain meaning from the volume and variety of digital information on the web
 * The original purpose of MapReduce was to compute very large matrix-vector multiplications, which was needed for Google's [PageRank](http://en.wikipedia.org/wiki/PageRank)
@@ -36,6 +38,15 @@ MapReduce is a method of processing large amounts of data for Big Data applicati
 ### Hadoop Streaming
 * Hadoop is built in Java, so it understands that language natively; but we can also use other langauges to write our Map and Reduce functions.
 * Need to run Hadoop through the hadoop-streaming JAR (Java Archive) file, part of Hadoop distribution. This file enables the connection between your Map and Reduce files written in Python and Hadoop based in Java.
+
+### General MapReduce Method
+
+1. A number of mappers will read data from HDSF. Each mapper will get a chunk of data and process it into key-value pairs, as determined by the code within the Map function.
+2. The key-value pairs are automatically collected and sorted by key. The pairs are separated and send to a number of reducers where each reduce task will get the same keys.
+3. The reducers will combine all values of the same key together as determined by the code in the Reduce function.
+
+Optional: if the reduce task is both commutative and associative, meaning that the order of the key-value pairs does not matter, then some or all of the reduce function can be passed to the mapper. In the following word count example, it is possible to perform some of the reducing in the map function. This can drastically reduce the amount of information that MapReduce needs to process in between map and reduce functions and thus the runtime of the application.
+It also possible to limit the number of reducers to keep the number of produced files low or in the case when the total amount of data to process can be done a lower number of reducers, or even a single reducer if possible.
 
 ### Word Count (the Hello World for MapReduce)
 * "Word Count" which takes text as input, produces a list of words, and counts frequency of each word
