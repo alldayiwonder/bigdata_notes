@@ -1,3 +1,17 @@
+# Notes on Big Data
+
+[Relational Databases and MySQL](https://github.com/alldayiwonder/bigdata_notes/blob/master/relational_mysql.md)
+
+[MapReduce Hadoop](https://github.com/alldayiwonder/bigdata_notes/blob/master/mapreduce_hadoop.md)
+
+[Natural Join with MapReduce](https://github.com/alldayiwonder/bigdata_notes/blob/master/natural_join_mapreduce.md)
+
+[Frequent Itemsets for Mining Data](https://github.com/alldayiwonder/bigdata_notes/blob/master/frequent_itemsets.md)
+
+[Similar Items](https://github.com/alldayiwonder/bigdata_notes/blob/master/similar_items.md)
+
+[Matrix-Vector Multiplication with MapReduce](https://github.com/alldayiwonder/bigdata_notes/blob/master/matrix_multiplication.md)
+
 # What is Big Data?
 As of 2015, there is no formal definition for the term "Big Data." This tends to cause a good deal of confusion, while at the same time presenting an exciting new field. Some may be lead to believe they are working with big data when they are using small data.
 
