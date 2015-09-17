@@ -7,8 +7,8 @@ The associated tables must have at least one or more pairs of identically named 
 The columns must be the same data type.
 
 
-R             |       | S  |   |  
-:----------: |:-------------:
+R |        | S  |    |  
+:----------: |:----------: |:-------------:|:----------: 
 A |	B        | B |		C
 0 |		1      | 0 |	1
 1 |		2      | 1 |	2
