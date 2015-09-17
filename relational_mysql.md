@@ -8,7 +8,7 @@ Below are notes on how to use MySQL for small data. For Big Data, relational dat
 
 ### Import data into MySQL
 
-[Notes on using LOAD DATA to import data into MySQL](http://cs.nyu.edu/~deena/wp_dbw_fa13/?page_id=483)
+[Using LOAD DATA to import data into MySQL](http://cs.nyu.edu/~deena/wp_dbw_fa13/?page_id=483)
 
 Via terminal:
 
