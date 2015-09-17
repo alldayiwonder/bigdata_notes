@@ -57,5 +57,3 @@ This method constructs a set of short strings from each document to be processed
 
 ### Minhashing
 A MinHash can be used to more efficiently answer the question of similarity. Jaccard similarity does the job, but it is inefficient for larger data sets. Minhasing saves integers instead of strings and compares the integers.
-
-### Signatures
