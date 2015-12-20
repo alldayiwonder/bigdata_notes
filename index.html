@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Notes on Big Data by stevecarrea</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Notes on Big Data</h1>
+      <h2 class="project-tagline">A collection of notes from studying big data.</h2>
+      <a href="https://github.com/stevecarrea/notes_bigData" class="btn">View on GitHub</a>
+      <a href="https://github.com/stevecarrea/notes_bigData/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/stevecarrea/notes_bigData/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="notes-on-big-data" class="anchor" href="#notes-on-big-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes on Big Data</h1>
+
+<p><a href="https://github.com/alldayiwonder/bigdata_notes/blob/master/relational_mysql.md">Relational Databases and MySQL</a></p>
+
+<p><a href="https://github.com/alldayiwonder/bigdata_notes/blob/master/mapreduce_hadoop.md">MapReduce Hadoop</a></p>
+
+<p><a href="https://github.com/alldayiwonder/bigdata_notes/blob/master/natural_join_mapreduce.md">Natural Join with MapReduce</a></p>
+
+<p><a href="https://github.com/alldayiwonder/bigdata_notes/blob/master/frequent_itemsets.md">Frequent Itemsets for Mining Data</a></p>
+
+<p><a href="https://github.com/alldayiwonder/bigdata_notes/blob/master/similar_items.md">Similar Items</a></p>
+
+<p><a href="https://github.com/alldayiwonder/bigdata_notes/blob/master/matrix_multiplication.md">Matrix-Vector Multiplication with MapReduce</a></p>
+
+<h1>
+<a id="what-is-big-data" class="anchor" href="#what-is-big-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is Big Data?</h1>
+
+<p>As of 2015, there is no formal definition for the term "Big Data." This tends to cause a good deal of confusion, while at the same time presenting an exciting new field. Some may be lead to believe they are working with big data when they are using small data.</p>
+
+<p>We find a similar issue with the term "green" used in the field of sustainability, and which also lacks any standard definition. And as with something claimed as being green, big data may also be subject to the equivalent of <a href="http://en.wikipedia.org/wiki/Greenwashing">greenwashing</a>, where organizations may use it solely as a buzz word.</p>
+
+<h2>
+<a id="the-common-definition-of-big-data" class="anchor" href="#the-common-definition-of-big-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Common Definition of Big Data</h2>
+
+<h3>
+<a id="volume-velocity-variety-the-three-vs" class="anchor" href="#volume-velocity-variety-the-three-vs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Volume, Velocity, Variety (The Three V's)</h3>
+
+<p>As described by Doug Laney in a 2001 <a href="http://blogs.gartner.com/doug-laney/files/2012/01/ad949-3D-Data-Management-Controlling-Data-Volume-Velocity-and-Variety.pdf">article</a>.</p>
+
+<ol>
+<li>Volume: data is too big to work with on a single machine.</li>
+<li>Velocity: data is too dynamic and being created at too high of a rate (e.g. tweets per second) for a single machine to handle.</li>
+<li>Variety: (e.g. unstructured data, NoSQL databases, etc)</li>
+</ol>
+
+<p>The first two points are relative to processing power and the latest technology in personal computing, the absolute volume or velocity that may identify Big Data will increase over time. And so this definition of Big Data is fluid and influenced by <a href="http://en.wikipedia.org/wiki/Moore%27s_law">Moore's Law</a>.</p>
+
+<p>If you have all three cases, you are dealing with big data under this common definition. If you have only one case, it is likely you are still dealing with big data.</p>
+
+<p>Examples having an instance of only one of the three V's:</p>
+
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Volume</td>
+<td>Genetics (structured, high volume of data)</td>
+</tr>
+<tr>
+<td>Velocity</td>
+<td>Earthquake detection data (e.g. streaming data, not necessarily stored)</td>
+</tr>
+<tr>
+<td>Variety</td>
+<td>Facial recognition data (may be static)</td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="small-data-vs-big-data" class="anchor" href="#small-data-vs-big-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Small Data vs Big Data</h3>
+
+<p>As described by Jules Berman in <a href="http://www.sciencedirect.com/science/book/9780124045767">Principles of Big Data</a>.</p>
+
+<table>
+<thead>
+<tr>
+<th>Small Data</th>
+<th>Big Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gathered for a specific goal</td>
+<td>May or may not have a goal initially, or may change with time</td>
+</tr>
+<tr>
+<td>Exists in one location, often in a single file</td>
+<td>Can be in multiple files and across multiple machines in different geographic locations</td>
+</tr>
+<tr>
+<td>Highly structured (e.g. spreadsheet, csv)</td>
+<td>May be unstructured, in a variety of different formats, and multi-disicplinary</td>
+</tr>
+<tr>
+<td>Prepared by end user for own purposes</td>
+<td>May be prepared by one group, analyzed by a second, and used by third group</td>
+</tr>
+<tr>
+<td>Kept for a finite time frame for project with clear endpoint (maybe 5 or 10 years in government or academia)</td>
+<td>May keep data indefinitely or with uncertain lifespan</td>
+</tr>
+<tr>
+<td>Data measured or recorded with a single protocol and units</td>
+<td>Data may be collected using a variety of protocols and units  throughout different geographical regions</td>
+</tr>
+<tr>
+<td>Can typically be reproduced</td>
+<td>May not be reproducible</td>
+</tr>
+<tr>
+<td>Cost of failure or losing data is small</td>
+<td>Cost of failure or losing data can be high</td>
+</tr>
+<tr>
+<td>Data describes itself in an important way</td>
+<td>May have to clean data thoroughly and filter out bogus information</td>
+</tr>
+<tr>
+<td>Can analyze all the data at once from a single file or machine</td>
+<td>May have to deal with portions of data and aggregate results</td>
+</tr>
+</tbody>
+</table>
+
+<h1>
+<a id="sources-of-data" class="anchor" href="#sources-of-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sources of Data</h1>
+
+<ul>
+<li>Human: data initiated by a human such as social network posts, cell phone calls, online purchases, and the metadata created alongside such data.</li>
+<li>Machine: communication between machines that may never be seen by humans (e.g. internet of things)</li>
+</ul>
+
+<h1>
+<a id="what-is-data-science" class="anchor" href="#what-is-data-science" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is Data Science?</h1>
+
+<p><a href="http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram"><img src="http://static1.squarespace.com/static/5150aec6e4b0e340ec52710a/t/51525c33e4b0b3e0d10f77ab/1364352052403/Data_Science_VD.png?format=750w" alt="data-science-venn-diagram" title="Data Science Venn Diagram"></a></p>
+
+<p><a href="http://www.oreilly.com/data/free/analyzing-the-analyzers.csp"><img src="https://www.safaribooksonline.com/library/view/doing-data-science/9781449363871/images/dnds_0104.png" alt="analyzing-the-analyzers" title="Sub Fields of Data Science"></a></p>
+
+<p>Harlan Harris’s clustering and visualization of subfields of data science from Analyzing the Analyzers (O’Reilly) by Harlan Harris, Sean Murphy, and Marck Vaisman based on a survey of several hundred data science practitioners in mid-2012</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/stevecarrea/notes_bigData">Notes on Big Data</a> is maintained by <a href="https://github.com/stevecarrea">stevecarrea</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
