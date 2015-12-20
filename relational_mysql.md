@@ -1,3 +1,7 @@
+---
+title: Notes on Relational Databases and MySQL
+---
+
 # Notes on Relational Databases and MySQL
 
 A relation is a table with attributes, or column headers. Rows of the relation are tuples, and the set of attributes in the relation is the schema.
